@@ -17,6 +17,7 @@ describe('DateCompare', function() {
     expect(twoDates1.getDifference()).toEqual(86400);
   });
   it('should return the difference in seconds of both dates', function() {
-    expect(twoDates2.getDifference()).toEqual(1,111,363,200);
+    expect(twoDates2.getDifference()).toEqual(1111359600);
+    //some calculations determine (1111363200)depending on DST interpretation
   });
 });
