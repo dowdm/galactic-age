@@ -23,6 +23,6 @@ describe('DateCompare', function() {
   });
 
   it('should return the Mercurial solar year age of given dates', function() {
-    expect(twoDates2.getDifference()).toEqual(146);
+    expect(twoDates2.toMercury()).toEqual(146);
   });
 });
