@@ -26,11 +26,15 @@ describe('DateCompare', function() {
     expect(twoDates2.toMercury()).toEqual(146);
   });
 
-  it('should return the Mercurial solar year age of given dates', function() {
+  it('should return the Venerian solar year age of given dates', function() {
     expect(twoDates2.toVenus()).toEqual(56);
   });
 
-  it('should return the Mercurial solar year age of given dates', function() {
+  it('should return the Martian solar year age of given dates', function() {
     expect(twoDates2.toMars()).toEqual(18);
+  });
+
+  it('should return the Jupiter solar year age of given dates', function() {
+    expect(twoDates2.toJupiter()).toEqual(2);
   });
 });
