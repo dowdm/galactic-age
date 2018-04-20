@@ -3,7 +3,7 @@ class DateCompare extends Date {
     super();
     this.date1 = date1;
     this.date2 = date2;
-
+    this.expectancy = 80;
   }
 
   getDifference() {
@@ -13,8 +13,10 @@ class DateCompare extends Date {
   toMercury() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
     let years = difference/31536000;
-    let mercury= years/.24;
-    return parseInt(mercury);
+    let mercury= parseInt(years/.24);
+    let remainder = (this.expectancy - years);
+    let mercuryremainder = parseInt(remainder/.24)
+    return [mercury, mercuryremainder];
   }
   toVenus() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
