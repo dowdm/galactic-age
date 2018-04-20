@@ -27,18 +27,22 @@ describe('DateCompare', function() {
   });
 
   it('should return the Venerian solar year age of given dates', function() {
-    expect(twoDates2.toVenus()).toEqual(56);
+    expect(twoDates2.toVenus()[0]).toEqual(56);
   });
 
   it('should return the Martian solar year age of given dates', function() {
-    expect(twoDates2.toMars()).toEqual(18);
+    expect(twoDates2.toMars()[0]).toEqual(18);
   });
 
   it('should return the Jovian solar year age of given dates', function() {
-    expect(twoDates2.toJupiter()).toEqual(2);
+    expect(twoDates2.toJupiter()[0]).toEqual(2);
   });
 
   it('should return the Mercurial solar year age of given dates', function() {
     expect(twoDates2.toMercury()[1]).toEqual(186);
+  });
+
+  it('should return the Mercurial solar year age of given dates', function() {
+    expect(twoDates2.toVenus()[1]).toEqual(72);
   });
 });
