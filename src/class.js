@@ -8,7 +8,7 @@ class DateCompare extends Date {
 
   getDifference() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
-    return difference;
+    return `${difference} babylonian seconds`;
   }
   toMercury() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
@@ -18,9 +18,9 @@ class DateCompare extends Date {
     let remainder = (this.expectancy - years);
     let mercuryRemainder = Math.abs(parseInt(remainder/.24));
     if (remainder > 0){
-      return [mercury, `${mercuryRemainder} left` ];
-    } else if (remainder < 0){
-      return [mercury, `${mercuryRemainder} exceeded` ];
+      return [`${mercury} mercury years`, `${mercuryRemainder} mercury years left` ];
+    } else if (remainder <= 0){
+      return [`${mercury} mercury years`, `${mercuryRemainder} mercury years exceeded` ];
     }
   }
   toVenus() {
@@ -30,9 +30,9 @@ class DateCompare extends Date {
     let remainder = (this.expectancy - years);
     let venusRemainder = Math.abs(parseInt(remainder/.62));
     if (remainder > 0){
-      return [venus, `${venusRemainder} left` ];
-    } else if (remainder < 0){
-      return [venus, `${venusRemainder} exceeded` ];
+      return [`${venus} venus years`, `${venusRemainder} venus years left` ];
+    } else if (remainder <= 0){
+      return [`${venus} venus years`, `${venusRemainder} venus years exceeded` ];
     }
   }
   toMars() {
@@ -42,9 +42,9 @@ class DateCompare extends Date {
     let remainder = (this.expectancy - years);
     let marsRemainder = Math.abs(parseInt(remainder/1.88));
     if (remainder > 0){
-      return [mars, `${marsRemainder} left` ];
-    } else if (remainder < 0){
-      return [mars, `${marsRemainder} exceeded` ];
+      return [`${mars} mars years`, `${marsRemainder} mars years left` ];
+    } else if (remainder <= 0){
+      return [`${mars} mars years`, `${marsRemainder} mars years exceeded` ];
     }
   }
   toJupiter() {
@@ -54,9 +54,9 @@ class DateCompare extends Date {
     let remainder = (this.expectancy - years);
     let jupiterRemainder = Math.abs(parseInt(remainder/11.86));
     if (remainder > 0){
-      return [jupiter, `${jupiterRemainder} left` ];
-    } else if (remainder < 0){
-      return [jupiter, `${jupiterRemainder} exceeded` ];
+      return [`${jupiter} jupiter years`, `${jupiterRemainder} jupiter years left` ];
+    } else if (remainder <= 0){
+      return [`${jupiter} jupiter years`, `${jupiterRemainder} jupiter years exceeded` ];
     }
   }
 }
