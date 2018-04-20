@@ -2,9 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Intergalactic Ricky's Date Computer</title>
   </head>
   <body>
-
+    <div class="container">
+      <form class="dateCalc">
+        <h1>Intergalactic Ricky's Date Computer </h1>
+        <h3>Please select two dates to calculate:</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label for="">Your birthday?</label>
+              <input class="form-control" id="dateOne" type="date" name="" value="" required>
+            </div>
+            <div class="col">
+              <label for="">Today?</label>
+              <input class="form-control" id="dateTwo" type="date" name="" value="" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+          </div>
+          <div class="jumbotron">
+            <h1><span id="output"></span></h1>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

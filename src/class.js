@@ -5,14 +5,12 @@ class DateCompare extends Date {
     this.date2 = date2;
     this.expectancy = 80;
   }
-
   getDifference() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
     return `${difference} babylonian seconds`;
   }
   toMercury() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
-    // getDifference();
     let years = difference/31536000;
     let mercury= parseInt(years/.24);
     let remainder = (this.expectancy - years);
@@ -60,5 +58,4 @@ class DateCompare extends Date {
     }
   }
 }
-
 export { DateCompare };
