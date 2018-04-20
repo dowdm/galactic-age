@@ -16,7 +16,11 @@ class DateCompare extends Date {
     let mercury= parseInt(years/.24);
     let remainder = (this.expectancy - years);
     let mercuryRemainder = parseInt(remainder/.24);
-    return [mercury, mercuryRemainder];
+    if (remainder > 0){
+      return [mercury, `${mercuryRemainder} left` ];
+    } else if (remainder < 0){
+      return [mercury, `Math.abs(${mercuryRemainder}) exceeded` ];
+    }
   }
   toVenus() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
