@@ -34,7 +34,7 @@ describe('DateCompare', function() {
     expect(twoDates2.toMars()).toEqual(18);
   });
 
-  it('should return the Jupiter solar year age of given dates', function() {
+  it('should return the Jovian solar year age of given dates', function() {
     expect(twoDates2.toJupiter()).toEqual(2);
   });
 });
