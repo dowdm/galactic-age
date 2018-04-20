@@ -25,4 +25,8 @@ describe('DateCompare', function() {
   it('should return the Mercurial solar year age of given dates', function() {
     expect(twoDates2.toMercury()).toEqual(146);
   });
+
+  it('should return the Mercurial solar year age of given dates', function() {
+    expect(twoDates2.toVenus()).toEqual(56);
+  });
 });
