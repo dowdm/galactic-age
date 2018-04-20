@@ -1,13 +1,21 @@
-import { Class } from "./../src/class.js";
+import { DateCompare } from "./../src/class.js";
 
 describe('Class', function() {
-  let reusableObject;
+  let inputDate1;
+  let inputDate2;
+  let inputDate2;
+  let geezerDate;
+  let twoDates;
 
   beforeEach(function() {
-    reusableObject = new Class(parameter);
+    inputDate1 = new Date(1983, 0, 31);
+    inputDate2 = new Date(2018, 3, 20);
+    inputDate3 = new Date(2018, 3, 19);
+    geezerDate = new Date(1933, 0, 31);
+    twoDates1 = new DateCompare(inputDate2, inputDate3)
   });
 
-  it('describe test', function() {
-    expect(reusableObject.prop).toEqual(value);
+  it('should return the difference in seconds of both dates', function() {
+    expect(twoDates1.getDifference).toEqual(86400);
   });
 });
