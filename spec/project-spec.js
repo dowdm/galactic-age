@@ -45,17 +45,23 @@ describe('DateCompare', function() {
   });
 
   it('should return the Venerian solar year expectancy remaining of given dates', function() {
-    expect(twoDates2.toVenus()[1]).toEqual(72);
+    expect(twoDates2.toVenus()[1]).toEqual('72 left');
   });
 
   it('should return the Martian solar year expectancy remaining of given dates', function() {
-    expect(twoDates2.toMars()[1]).toEqual(23);
+    expect(twoDates2.toMars()[1]).toEqual('23 left');
   });
 
   it('should return the Jovian solar year expectancy remaining of given dates', function() {
-    expect(twoDates2.toJupiter()[1]).toEqual(3);
+    expect(twoDates2.toJupiter()[1]).toEqual('3 left');
   });
   it('should return the Mercury solar year life expectancy exceeded of given age', function() {
-    expect(twoDates3.toMercury()[1]).toEqual('3 exceeded');
+    expect(twoDates3.toMercury()[1]).toEqual('21 exceeded');
+  });
+  it('should return the Venerian solar year life expectancy exceeded of given age', function() {
+    expect(twoDates3.toVenus()[1]).toEqual('8 exceeded');
+  });
+  it('should return the Martian solar year life expectancy exceeded of given age', function() {
+    expect(twoDates3.toVenus()[1]).toEqual('2 exceeded');
   });
 });
