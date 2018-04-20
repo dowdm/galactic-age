@@ -16,8 +16,13 @@ describe('DateCompare', function() {
   it('should return the difference in seconds of both dates', function() {
     expect(twoDates1.getDifference()).toEqual(86400);
   });
+
   it('should return the difference in seconds of both dates', function() {
     expect(twoDates2.getDifference()).toEqual(1111359600);
     //some calculations determine (1111363200)depending on DST interpretation
+  });
+
+  it('should return the Mercurial solar year age of given dates', function() {
+    expect(twoDates2.getDifference()).toEqual(146);
   });
 });
