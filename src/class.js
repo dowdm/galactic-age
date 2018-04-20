@@ -15,26 +15,32 @@ class DateCompare extends Date {
     let years = difference/31536000;
     let mercury= parseInt(years/.24);
     let remainder = (this.expectancy - years);
-    let mercuryremainder = parseInt(remainder/.24)
-    return [mercury, mercuryremainder];
+    let mercuryRemainder = parseInt(remainder/.24);
+    return [mercury, mercuryRemainder];
   }
   toVenus() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
     let years = difference/31536000;
-    let venus= years/.62;
-    return parseInt(venus);
+    let venus= parseInt(years/.62);
+    let remainder = (this.expectancy - years);
+    let venusRemainder = parseInt(remainder/.62);
+    return [venus, venusRemainder];
   }
   toMars() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
     let years = difference/31536000;
-    let mars= years/1.88;
-    return parseInt(mars);
+    let mars= parseInt(years/1.88);
+    let remainder = (this.expectancy - years);
+    let marsRemainder = parseInt(remainder/1.88);
+    return [mars, marsRemainder];
   }
   toJupiter() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
     let years = difference/31536000;
-    let jupiter= years/11.86;
-    return parseInt(jupiter);
+    let jupiter= parseInt(years/11.86);
+    let remainder = (this.expectancy - years);
+    let jupiterRemainder = parseInt(remainder/11.86);
+    return [jupiter, jupiterRemainder];
   }
 }
 
