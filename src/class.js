@@ -11,15 +11,16 @@ class DateCompare extends Date {
     return difference;
   }
   toMercury() {
-    let difference = Math.abs(this.date1/1000 - this.date2/1000);
+    // let difference = Math.abs(this.date1/1000 - this.date2/1000);
+    getDifference();
     let years = difference/31536000;
     let mercury= parseInt(years/.24);
     let remainder = (this.expectancy - years);
-    let mercuryRemainder = parseInt(remainder/.24);
+    let mercuryRemainder = Math.abs(parseInt(remainder/.24));
     if (remainder > 0){
       return [mercury, `${mercuryRemainder} left` ];
     } else if (remainder < 0){
-      return [mercury, `Math.abs(${mercuryRemainder}) exceeded` ];
+      return [mercury, `${mercuryRemainder} exceeded` ];
     }
   }
   toVenus() {
@@ -27,8 +28,12 @@ class DateCompare extends Date {
     let years = difference/31536000;
     let venus= parseInt(years/.62);
     let remainder = (this.expectancy - years);
-    let venusRemainder = parseInt(remainder/.62);
-    return [venus, venusRemainder];
+    let venusRemainder = Math.abs(parseInt(remainder/.62));
+    if (remainder > 0){
+      return [venus, `${venusRemainder} left` ];
+    } else if (remainder < 0){
+      return [venus, `${venusRemainder} exceeded` ];
+    }
   }
   toMars() {
     let difference = Math.abs(this.date1/1000 - this.date2/1000);
