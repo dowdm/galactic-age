@@ -56,6 +56,6 @@ describe('DateCompare', function() {
     expect(twoDates2.toJupiter()[1]).toEqual(3);
   });
   it('should return the Mercury solar year life expectancy exceeded of given age', function() {
-    expect(twoDates3.toMercury()[1]).toEqual(3);
+    expect(twoDates3.toMercury()[1]).toEqual('3 exceeded');
   });
 });
