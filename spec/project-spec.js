@@ -62,6 +62,6 @@ describe('DateCompare', function() {
     expect(twoDates3.toVenus()[1]).toEqual('8 exceeded');
   });
   it('should return the Martian solar year life expectancy exceeded of given age', function() {
-    expect(twoDates3.toVenus()[1]).toEqual('2 exceeded');
+    expect(twoDates3.toMars()[1]).toEqual('2 exceeded');
   });
 });
